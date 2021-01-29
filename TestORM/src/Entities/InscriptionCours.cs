@@ -15,13 +15,16 @@ namespace TestORMCodeFirst.Entities
         [Required]
         public short EtudiantID { get; set; }
 
-        [Required]
+        [ForeignKey("Cours")]
         [Column(TypeName = "varchar(10)")]
         public string CodeCours { get; set; }
+        public virtual Cours cours { get; set; }
 
         [Required]
         [Column(TypeName = "varchar(5)")]
         public string CodeSession { get; set; }
+
+        public short? NoteFinale { get; set; }
 
         //Propriétés de navigation
         [ForeignKey("EtudiantID")]
