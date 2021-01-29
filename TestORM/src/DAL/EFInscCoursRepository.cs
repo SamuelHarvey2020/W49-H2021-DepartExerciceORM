@@ -56,5 +56,28 @@ namespace TestORMCodeFirst.DAL
             contexte.SaveChanges();
         }
 
+        public int NombreEtudiantsInscrits(string codeCours, string session){
+
+            InscriptionCours cours = contexte.InscCours.Find(codeCours);
+
+            if (cours != null) {
+                return cours.Etudiant.Where(insc => insc.CodeSession == session).Count();
+            }
+            return null;
+
+        }
+
+        public NombreInscriptionsCours(short etudiantId, string session)
+        {
+            
+            Etudiant etud = contexte.InscCours.Find(etudiantId);
+            if (etud != null)
+            {
+                return etud.Cours.Where(insc => insc.CodeSession == session).Count();
+            }
+            return null;
+            
+        }
+
     }
 }
