@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +22,6 @@ namespace TestORMCodeFirst.Entities
         [Column(TypeName = "varchar(50)")]
         public string NomCours { get; set; }
 
-        public virtual ICollection<InscriptionCours> Cours { get; set; }
+        public virtual ICollection<InscriptionCours> inscCours { get; set; }
     }
 }
