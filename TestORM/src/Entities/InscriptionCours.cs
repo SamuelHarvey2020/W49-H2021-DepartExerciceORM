@@ -18,7 +18,7 @@ namespace TestORMCodeFirst.Entities
         [ForeignKey("Cours")]
         [Column(TypeName = "varchar(10)")]
         public string CodeCours { get; set; }
-        public virtual Cours cours { get; set; }
+        public virtual Cours Cours { get; set; }
 
         [Required]
         [Column(TypeName = "varchar(5)")]

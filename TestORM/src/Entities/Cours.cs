@@ -14,7 +14,6 @@ namespace TestORMCodeFirst.Entities
         //Propriétés
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(TypeName = "varchar(10)")]
         public string CodeCours { get; set; }
 
@@ -22,6 +21,11 @@ namespace TestORMCodeFirst.Entities
         [Column(TypeName = "varchar(50)")]
         public string NomCours { get; set; }
 
-        public virtual ICollection<InscriptionCours> inscCours { get; set; }
+        public virtual ICollection<InscriptionCours> InscCours { get; set; }
+
+        public Cours()
+        {
+            InscCours = new List<InscriptionCours>();
+        }
     }
 }

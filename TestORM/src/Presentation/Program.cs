@@ -84,13 +84,13 @@ namespace TestORMCodeFirst.Presentation
                 //Afficher liste des cours
                 Console.WriteLine("");
                 Console.WriteLine("Afficher liste des cours");
-                /*
+                
                 Cours coursBD = new Cours() { NomCours = "BD", CodeCours = "420-V40" };
                 Cours coursWeb = new Cours() { NomCours = "Web", CodeCours = "420-V10" };
                 
                 InscriptionCours cours = new InscriptionCours() { Etudiant = jean, Cours = coursBD, CodeSession = "H2021" };
                 InscriptionCours cours2 = new InscriptionCours() { Etudiant = jean, Cours = coursWeb, CodeSession = "H2021" };
-                */
+                
                 /**************************************************
                 //Ajouter la méthode AjouterCours dans le bon repository
                 ***************************************************/
