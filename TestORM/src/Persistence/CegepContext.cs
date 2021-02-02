@@ -45,7 +45,7 @@ namespace TestORMCodeFirst.Persistence
                         .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<InscriptionCours>()
-                        .HasOne(inscription => inscription.CodeCours)
+                        .HasOne(inscription => inscription.Cours)
                         .WithMany(cours => cours.InscCours)
                         .OnDelete(DeleteBehavior.Restrict);
 
